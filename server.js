@@ -14,10 +14,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) =>
-  res.render("maintenance", { endDate: "01 / 02 / 19" })
-);
-
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
@@ -27,5 +23,8 @@ app
   })
   .get("/about", (req, res) => {
     res.render("home", { message: "ABOUUUUUUT" });
+  })
+  .get("/projects", (req, res) => {
+    res.render("projects", { bodyMessage: "All project pages" });
   })
   .listen(port, () => console.log(`Listening on ${port}`));
