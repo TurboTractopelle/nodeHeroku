@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) =>
-  res.render("maintenance", { endDate: "01 / 01 / 19" })
+  res.render("maintenance", { endDate: "01 / 02 / 19" })
 );
 
 app.engine("handlebars", exphbs());
